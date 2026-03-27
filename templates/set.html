@@ -98,9 +98,12 @@
 
                         const setPreviewImage = document.getElementById("setPreviewImage");
                         if (setJson.set.preview_image_url) {
-                            setPreviewImage.src = setJson.set.preview_image_url;
-                            setPreviewImage.style.display = "block";
-                        }
+                          setPreviewImage.src = setJson.set.preview_image_url;
+                         setPreviewImage.style.display = "block";
+                           } else {
+                           setPreviewImage.style.display = "none";
+                          setPreviewImage.removeAttribute("src");
+                           }
 
                         const inventoryTable = document.getElementById("inventory");
                         inventoryTable.innerHTML = "";
